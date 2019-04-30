@@ -126,7 +126,7 @@ def get_app_list(context, order=True):
 
 def get_admin_site(context):
     try:
-        current_resolver = resolve(context.get('request').path)
+        current_resolver = context.get('request').resolver_match
         index_resolver = resolve(reverse('%s:index' % current_resolver.namespaces[0]))
 
         if hasattr(index_resolver.func, 'admin_site'):
