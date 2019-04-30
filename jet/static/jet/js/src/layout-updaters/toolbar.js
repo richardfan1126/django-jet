@@ -106,6 +106,8 @@ ToolbarUpdater.prototype = {
         });
 
         $changelist.find('#changelist-filter').remove();
+        $changelist.find('#changelist-search input[type="hidden"]').remove();
+
     },
     fixFloatLineBreak: function() {
         $('#content-main').each(function() {
